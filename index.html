@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>guess me </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113476309-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113476309-1');
+</script>
+
+  <script src="js/techmyntra.js">
+</script>
+</head>
+<style>
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}
+</style>
+<body onload="check_user();"> 
+
+  <script type="text/javascript">
+    var q=localStorage.getItem("quiz");
+    if(q=='true')
+{
+ window.location.href="created.html";
+
+}
+  </script>
+ 
+<div class="container">
+  <h2>guess <span style="color: red;">me</span> </h2>
+  <div class="card">
+    <div class="card-body">
+      <form action="" id="nameregister">
+  <div class="form-group">
+    <label for="name">Your name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+        <input type="hidden" class="form-control" id="key" name="key" value="Gd243vdfgdfgfdgfd55554GFFDGFDGSGSDsaDSF">
+
+    
+  </div>
+ 
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+<div id="result"></div>
+
+
+
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+       $("#nameregister").submit(function(e) {
+
+    var url = "api/register.php"; // the script where you handle the form input.
+
+
+    $.ajax({
+           type: "POST",
+           url: url,
+           //data: $("#admision1").serialize(), // serializes the form's elements.
+           type: "POST",
+data:  new FormData(this),
+contentType: false, 
+cache: false,
+processData:false,
+           beforeSend:function(){
+
+            $("#nameregister").html("<center><span style='margin-left:60px;background:#f1f1f1'><img src='loadgif.gif' width=20x50></span></center>");
+          
+           },
+          success: function(result){
+
+         //var s=result[0];
+//alert(result);
+ var obj = JSON.parse(result);
+  var name=obj.name;
+   var token=obj.token;
+
+
+   register(name,token);
+ //window.location.href="word-to-pdf-download.php?"+s;
+  window.location.href="quiz.html";
+  // window.location.href="wordtopdfdownload.php?link="+result;
+//startprocess(li,file);
+  // $('#upload').hide();
+
+  //  $('#download').show();
+   
+}     
+               
+               
+               
+          ,
+          complete:function()
+          {
+
+
+
+          },
+
+            error:function(xhr,status,error){
+              alert(error);
+
+            }
+         });
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+});
+</script>
+
+</body>
+</html>

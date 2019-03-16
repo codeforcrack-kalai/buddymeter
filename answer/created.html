@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>guess me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113476309-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113476309-1');
+</script>
+
+  <script src="js/techmyntra.js">
+</script>
+<script type="text/javascript">
+  
+   var url = window.location.href;;
+var scored = url.substring(url.indexOf('#')+1);
+
+
+var qt=localStorage.getItem("quizhash");
+
+ var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange=function() {
+    if (this.readyState == 4 && this.status == 200) {
+ var s= JSON.parse(this.responseText);
+      var s1=s[0].name;
+
+      document.getElementById('qname').innerHTML=s1;
+      //window.alert(s1);
+    }
+  };
+  xhttp.open("post", "api/get_quiz_sender_name.php?qtoken="+qt);
+  xhttp.send();
+
+
+   var xhttp1 = new XMLHttpRequest();
+  xhttp1.onreadystatechange=function() {
+    if (this.readyState == 4 && this.status == 200) {
+ var s= this.responseText;
+     // var s11=s[0].name;
+
+   //   document.getElementById('tbl').innerHTML=s;
+      //window.alert(s);
+    }
+  };
+  xhttp1.open("post", "api/get_quiz_results.php?qtoken=swjtc");
+  xhttp1.send();
+
+
+</script>
+<!--design and Developed by techmyntra-->
+</head>
+<style>
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
+#mytable,td{
+    border:1px solid blue;
+}
+</style>
+<body onload="get_user();"> 
+ 
+ 
+<div class="container">
+  <h2>guess <span style="color: red;">me</span> </h2>
+  <div class="card">
+    <div class="card-body">
+      
+      <div class="alert alert-primary" role="alert">
+
+
+ <b>Congratulation! <span id="name"></span> answered all the questions about <span id="qname"></span>
+</b>
+
+
+</div>
+  <div> <div class="alert alert-warning"
+ role="alert">
+  <b>
+
+    <script type="text/javascript">
+
+
+      
+      document.write('You scored '+scored+' / 10');
+    </script>
+
+    
+
+
+</b>
+
+  <span id="token" style="visibility: hidden;"> </span>
+</div>
+
+<script type="text/javascript">
+  
+  var lab=localStorage.getItem("lab");
+var n=localStorage.getItem("name");
+var t=localStorage.getItem("token");
+var q=localStorage.getItem("quiz");
+
+
+
+</script>
+
+
+
+
+
+<a href="" id="mylink" class="btn btn-success btn-lg">Create Your Quiz Now</a><br><br>
+
+<!--<a href=""  id="mylink2" class="btn btn-primary btn-lg" style="background-color: #3b5998;border-color:#3b5998; "><img src="img/facebook-logo.png" width="90x90"></a><br><br>-->
+
+
+
+
+
+
+  
+
+<script type="text/javascript">
+
+
+
+  function delete_quiz()
+{
+
+
+//window.alert('lol');
+  var lab=localStorage.getItem("lab");
+var n=localStorage.getItem("name");
+var t=localStorage.getItem("token");
+
+var q=localStorage.getItem("quiz");
+
+ var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange=function() {
+    if (this.readyState == 4 && this.status == 200) {
+ var s= JSON.parse(this.responseText);
+      var s1=s.response_code;
+     // window.alert(s1);
+    }
+  };
+  xhttp.open("GET", "api/delete_qiz.php?name=" +n+"&token="+t);
+  xhttp.send();
+
+localStorage.removeItem("quiz");
+
+window.location.href="quiz.html";
+
+
+}</script>
+
+
+    </div>
+  </div>
+</div>
+
+<div class="container">
+ 
+  <div class="card">
+    <div class="card-body">
+      <script type="text/javascript">
+
+   var xhttp1 = new XMLHttpRequest();
+  xhttp1.onreadystatechange=function() {
+    if (this.readyState == 4 && this.status == 200) {
+ var s123= this.responseText;
+     // var s11=s[0].name;
+
+      document.getElementById('tbl').innerHTML=s123;
+    //window.alert(s123);
+    }
+  };
+  xhttp1.open("post", "api/get_quiz_results.php?qtoken="+qt);
+  xhttp1.send();
+       
+       //document.write(s123);
+     </script>
+
+     <div id="tbl"></div>
+
+
+<br><br><br>
+<div id="tbl">
+  </div>
+
+
+
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  
+var link = document.getElementById("mylink");
+link.setAttribute('href', "http://guessme.co.in/quiz.html#"+t);
+
+
+var link2 = document.getElementById("mylink2");
+link2.setAttribute('href', "fb-messenger://share/?link=http://guessme.co.in/answer.html#"+t);
+
+</script>
+<!--design and Developed by techmyntra-->
+</body>
+</html>

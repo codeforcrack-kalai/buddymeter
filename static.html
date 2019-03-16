@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en">
+
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><link rel="manifest" href="manifest.json"><link rel="shortcut icon" href="favicon.ico">
+
+
+	<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-7679612644841972",enable_page_level_ads:!0})</script>
+
+ <script src="js/techmyntra.js">
+</script>
+
+	<link href="bootstrap.min.css" rel="stylesheet"/>
+
+	<title>Which one will your friend choose?</title>
+	<style type="text/css">
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
+}
+
+
+
+
+li {
+    display: inline;
+    display: inline-block !important;
+}</style>
+
+	<link href="static/css/main.418f1a15.css" rel="stylesheet"></head>
+
+
+
+<body onload="get_user();">  <script type="text/javascript">
+    var q=localStorage.getItem("quiz");
+    if(q=='true')
+{
+ window.location.href="created.html";
+
+}
+  </script>
+ <noscript>You need to enable JavaScript to run this APP.</noscript>
+
+
+<div id="root"><div class="container"><div class="row justify-content-sm-center"><div class="col-sm-auto col-md-6"><nav class="navbar navbar-expand-md navbar-light bg-faded"><a href="/" class="navbar-brand"><img src="http://cdn.chooseone.co.in/img/logo.jpg" alt="Choose one!"></a></nav><div class="Layout__jumbotron__bQNMb jumbotron">
+
+
+
+<div class="Layout__jumbotron__bQNMb jumbotron"><div class="card"><div class="Question__CardBody___4L-a card-body"><div class="questions">
+
+
+	<div>
+		<ins class="adsbygoogle" data-ad-client="ca-pub-7679612644841972" data-ad-slot="6551781047" data-ad-format="auto" data-adsbygoogle-status="done" style="display: block; height: 60px;"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:514px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:514px;background-color:transparent;">
+
+
+
+	<iframe width="514" height="60" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;width:514px;height:60px;"></iframe></ins></ins></ins></div>
+ <span id="qid" style="visibility: hidden;"></span>
+
+ <div class="alert alert-primary" role="alert">
+  Dear <span id="name"></span> ,  create your quiz!
+
+  
+</div>
+
+	<h5 class="text-center" style="margin: 5px 0px;"><b id="question"></b></h5>
+
+	<div class="row">
+   <div class="Question__PaddingRight__3uXRb col-6">
+      <div class="card">
+
+
+         <p><label>
+    <input type="radio" name="option" value="1" id="myRadio" onclick="handleClick(this);" />
+    <img id="option1" src="" width="257x300" class="card-img-top"><br>
+
+    
+
+  </label> </p>
+         
+         <div class="card-body">
+            <h5 id="option1_text" class="Question__h5_lineheight__2u7Xf text-center" ><div id="option1_text"></div></h5>
+         </div>
+      </div>
+   </div>
+   <div class="Question__PaddingLeft__m01FU col-6">
+      <div class="card">
+
+
+
+         <p><label>
+    <input type="radio" name="option" value="2" id="myRadio" onclick="handleClick(this);" />
+    <img id="option2" src="" width="257x300" class="card-img-top"><br>
+    
+  </label> </p>
+
+         <div class="card-body">
+            <h5 class="Question__h5_lineheight__2u7Xf text-center"><div id="option2_text"></div></h5>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+<p class="Question__MarginTop__1mLIt"><button type="button" class="btn btn-success" value="" id="qc" >Question 1/10</button></p>
+<p class="text-center"> <button type="button" class="btn btn-warning" onclick="getrandomnum();">Skip this question &gt;&gt;&gt;</button></p>
+</div></div></div>
+
+
+
+
+</div></div></div></div></div>
+
+
+
+</body>
+
+</html>
