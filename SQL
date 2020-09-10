@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.6.6deb5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 16, 2020 at 05:45 PM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.11
+-- Host: localhost:3306
+-- Generation Time: Sep 10, 2020 at 04:13 PM
+-- Server version: 5.7.31-0ubuntu0.18.04.1
+-- PHP Version: 7.2.29-1+ubuntu18.04.1+deb.sury.org+1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `qizapp`
+-- Database: `buddy`
 --
 
 -- --------------------------------------------------------
@@ -42,14 +40,14 @@ CREATE TABLE `qiz_qes_1231` (
 --
 
 INSERT INTO `qiz_qes_1231` (`id`, `question`, `option1url`, `option2url`, `option1txt`, `option2txt`) VALUES
-(1, 'Do you like school life or college life?', 'http://cdn.chooseone.co.in/imgs/08/5a5394c82f159.jpg', 'http://cdn.chooseone.co.in/imgs/08/5a5394c82f15b.jpg', 'school', 'college'),
-(2, 'Do you like to 2 buy New Clothes or New Phone?', 'http://cdn.chooseone.co.in/imgs/09/5a54758d47438.jpg', 'http://cdn.chooseone.co.in/imgs/09/5a54758d4743a.jpg', 'Clothes', 'New Phone'),
-(3, 'Do you like to 3 buy New Clothes or New Phone?', 'http://cdn.chooseone.co.in/imgs/09/5a54758d47438.jpg', 'http://cdn.chooseone.co.in/imgs/09/5a54758d4743a.jpg', 'Clothes', 'New Phone'),
-(4, 'Do you like to 4 buy New Clothes or New Phone?', 'http://cdn.chooseone.co.in/imgs/09/5a54758d47438.jpg', 'http://cdn.chooseone.co.in/imgs/09/5a54758d4743a.jpg', 'Clothes', 'New Phone'),
-(5, 'Do you like to 5 buy New Clothes or New Phone?', 'http://cdn.chooseone.co.in/imgs/09/5a54758d47438.jpg', 'http://cdn.chooseone.co.in/imgs/09/5a54758d4743a.jpg', 'Clothes', 'New Phone'),
-(6, 'Do you like to 6 buy New Clothes or New Phone?', 'http://cdn.chooseone.co.in/imgs/09/5a54758d47438.jpg', 'http://cdn.chooseone.co.in/imgs/09/5a54758d4743a.jpg', 'Clothes', 'New Phone'),
-(7, 'Do you like to 7 buy New Clothes or New Phone?', 'http://cdn.chooseone.co.in/imgs/09/5a54758d47438.jpg', 'http://cdn.chooseone.co.in/imgs/09/5a54758d4743a.jpg', 'Clothes', 'New Phone'),
-(8, 'Do you like to 8 buy New Clothes or New Phone?', 'http://cdn.chooseone.co.in/imgs/09/5a54758d47438.jpg', 'http://cdn.chooseone.co.in/imgs/09/5a54758d4743a.jpg', 'Clothes', 'New Phone');
+(1, 'Do you like school life or college life?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'school', 'college'),
+(2, 'Do you like to 2 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone'),
+(3, 'Do you like to 3 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone'),
+(4, 'Do you like to 4 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone'),
+(5, 'Do you like to 5 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone'),
+(6, 'Do you like to 6 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone'),
+(7, 'Do you like to 7 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone'),
+(8, 'Do you like to 8 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone');
 
 -- --------------------------------------------------------
 
@@ -94,7 +92,17 @@ INSERT INTO `quiz_1231` (`id`, `name`, `token`, `qid`, `qname`, `option1_url`, `
 (57, 'fcgvb', 'p6olr', '2', 'Do you like to 2 buy New Clothes or New Phone?', 'http://cdn.chooseone.co.in/imgs/09/5a54758d47438.jpg', 'http://cdn.chooseone.co.in/imgs/09/5a54758d4743a.jpg', 'Clothes', 'New Phone', '2'),
 (58, 'fcgvb', 'p6olr', '2', 'Do you like to 2 buy New Clothes or New Phone?', 'http://cdn.chooseone.co.in/imgs/09/5a54758d47438.jpg', 'http://cdn.chooseone.co.in/imgs/09/5a54758d4743a.jpg', 'Clothes', 'New Phone', '1'),
 (59, 'fcgvb', 'p6olr', '2', 'Do you like to 2 buy New Clothes or New Phone?', 'http://cdn.chooseone.co.in/imgs/09/5a54758d47438.jpg', 'http://cdn.chooseone.co.in/imgs/09/5a54758d4743a.jpg', 'Clothes', 'New Phone', '2'),
-(60, 'fcgvb', 'p6olr', '1', 'Do you like school life or college life?', 'http://cdn.chooseone.co.in/imgs/08/5a5394c82f159.jpg', 'http://cdn.chooseone.co.in/imgs/08/5a5394c82f15b.jpg', 'school', 'college', '1');
+(60, 'fcgvb', 'p6olr', '1', 'Do you like school life or college life?', 'http://cdn.chooseone.co.in/imgs/08/5a5394c82f159.jpg', 'http://cdn.chooseone.co.in/imgs/08/5a5394c82f15b.jpg', 'school', 'college', '1'),
+(71, 'KALAI', 'atpjl', '1', 'Do you like school life or college life?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'school', 'college', '2'),
+(72, 'KALAI', 'atpjl', '3', 'Do you like to 3 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone', '1'),
+(73, 'KALAI', 'atpjl', '2', 'Do you like to 2 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone', '2'),
+(74, 'KALAI', 'atpjl', '5', 'Do you like to 5 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone', '1'),
+(75, 'KALAI', 'atpjl', '1', 'Do you like school life or college life?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'school', 'college', '2'),
+(76, 'KALAI', 'atpjl', '4', 'Do you like to 4 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone', '2'),
+(77, 'KALAI', 'atpjl', '5', 'Do you like to 5 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone', '1'),
+(78, 'KALAI', 'atpjl', '3', 'Do you like to 3 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone', '2'),
+(79, 'KALAI', 'atpjl', '3', 'Do you like to 3 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone', '1'),
+(80, 'KALAI', 'atpjl', '5', 'Do you like to 5 buy New Clothes or New Phone?', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'https://i.ibb.co/FWBQkkr/5a5474a2eb7be.jpg', 'Clothes', 'New Phone', '2');
 
 -- --------------------------------------------------------
 
@@ -182,7 +190,9 @@ INSERT INTO `users_1231` (`id`, `name`, `token`) VALUES
 (43, 'kalia 45', 'v0q2c'),
 (44, 'kalai 22', 'ze5o2'),
 (45, 'kalai pppp', 'fl44o'),
-(46, 'fcgvb', 'p6olr');
+(46, 'fcgvb', 'p6olr'),
+(47, 'KALAI', 'atpjl'),
+(48, 'KALAI', '9jwtq');
 
 --
 -- Indexes for dumped tables
@@ -221,26 +231,21 @@ ALTER TABLE `users_1231`
 --
 ALTER TABLE `qiz_qes_1231`
   MODIFY `id` int(120) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
 --
 -- AUTO_INCREMENT for table `quiz_1231`
 --
 ALTER TABLE `quiz_1231`
-  MODIFY `id` int(120) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
-
+  MODIFY `id` int(120) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 --
 -- AUTO_INCREMENT for table `results_1231`
 --
 ALTER TABLE `results_1231`
   MODIFY `id` int(120) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
 --
 -- AUTO_INCREMENT for table `users_1231`
 --
 ALTER TABLE `users_1231`
-  MODIFY `id` int(120) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
-COMMIT;
-
+  MODIFY `id` int(120) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
